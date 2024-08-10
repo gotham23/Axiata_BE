@@ -43,9 +43,9 @@ Jalankan perintah Sequelize db:seed:all
 ```bash
   npm run db:seed
 ```
-melakukan 3 perintah diatas sekaligus 
-| yarn db:refresh
-
+```melakukan 3 perintah diatas sekaligus 
+ yarn db:refresh
+```
 Jalankan Program
 
 ```bash
