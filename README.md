@@ -1,7 +1,7 @@
 # Binar: Express.js Final Project
 
 
-Repository ini ditujukan untuk pengembangan BE (Backend Final Project BINAR) dari MyAirfare
+Repository ini ditujukan untuk pengembangan BE (Backend) dari Umkm Solo
 
 
 ## Run Locally
