@@ -38,7 +38,7 @@ module.exports = {
       };
       let categories = await categoryRepo.findId(args.category);
       if (categories == null ){
-        return {error: 404, msg: 'Toko tidak tersedia' }
+        return {error: 404, msg: 'Kategori tidak tersedia' }
       }
       if (!req.body.category) {
         return {error: 404, msg: 'harap masukan kategori toko' }  
