@@ -1,0 +1,582 @@
+{
+	"info": {
+		"_postman_id": "cfda7d4a-e206-4a84-b3c4-c1f13655cdc4",
+		"name": "Axiata",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15911023",
+		"_collection_link": "https://blue-eclipse-629066.postman.co/workspace/My-Workspace~798b4358-da32-4574-842f-d6e2e52447d7/collection/15911023-cfda7d4a-e206-4a84-b3c4-c1f13655cdc4?action=share&source=collection_link&creator=15911023"
+	},
+	"item": [
+		{
+			"name": "shop",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "update Shop",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYzhhNjVlNmQtMWJkNC00OGM4LTljYjgtYzgwZDU0YmI5NTE1IiwiaWF0IjoxNzIzMjIxNTY5fQ.iugSuUq8jzeJ160Dc-s2tX59ORkiOIi2sGk_Bq--N-0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \" kollo shop\",\r\n    \"alamat\" : \"surabaya\",\r\n    \"category\" : 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/shop/:id/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"shop",
+										":id",
+										"update"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "d8a687e6-1924-40ea-a8a5-337704bc4248"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete Shop",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYzhhNjVlNmQtMWJkNC00OGM4LTljYjgtYzgwZDU0YmI5NTE1IiwiaWF0IjoxNzIzMjIxNTY5fQ.iugSuUq8jzeJ160Dc-s2tX59ORkiOIi2sGk_Bq--N-0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/shop/:id/delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"shop",
+										":id",
+										"delete"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "0afc04f2-e28a-4602-9ae7-cfa0a724235a"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "http://localhost:3000/api/v1/shop/:id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYzhhNjVlNmQtMWJkNC00OGM4LTljYjgtYzgwZDU0YmI5NTE1IiwiaWF0IjoxNzIzMjIxNTY5fQ.iugSuUq8jzeJ160Dc-s2tX59ORkiOIi2sGk_Bq--N-0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/shop/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"shop",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "dc36feda-e05e-4472-89ce-53cd2f80f13e"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "create shop",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYzhhNjVlNmQtMWJkNC00OGM4LTljYjgtYzgwZDU0YmI5NTE1IiwiaWF0IjoxNzIzMjIxNTY5fQ.iugSuUq8jzeJ160Dc-s2tX59ORkiOIi2sGk_Bq--N-0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"kozzy Shop\",\r\n        \"photo\": \"/user/avatar_default.png\",\r\n        \"alamat\": \"jakarta\",\r\n        \"category\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/shop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"shop"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "menampilkan data toko",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNmQzNWVkNzMtNWIyNy00OTEyLWI5NGYtMWIzZjNiMDFhZTdlIiwiaWF0IjoxNzIzMDQ3NzY4fQ.ygCQDKphEGSj9TlNH77GfA1pXaIMn8kMcaecW46vU8I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/shop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"shop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "menampilkan data produk by id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYzhhNjVlNmQtMWJkNC00OGM4LTljYjgtYzgwZDU0YmI5NTE1IiwiaWF0IjoxNzIzMjIxNTY5fQ.iugSuUq8jzeJ160Dc-s2tX59ORkiOIi2sGk_Bq--N-0",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/shop/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"shop",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "dc36feda-e05e-4472-89ce-53cd2f80f13e"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete product",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYzhhNjVlNmQtMWJkNC00OGM4LTljYjgtYzgwZDU0YmI5NTE1IiwiaWF0IjoxNzIzMjIxNTY5fQ.iugSuUq8jzeJ160Dc-s2tX59ORkiOIi2sGk_Bq--N-0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/shop/:id/delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"shop",
+										":id",
+										"delete"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "0afc04f2-e28a-4602-9ae7-cfa0a724235a"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Product",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "x-access-token",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYzhhNjVlNmQtMWJkNC00OGM4LTljYjgtYzgwZDU0YmI5NTE1IiwiaWF0IjoxNzIzMjIxNTY5fQ.iugSuUq8jzeJ160Dc-s2tX59ORkiOIi2sGk_Bq--N-0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\" : \" kollo shop\",\r\n    \"alamat\" : \"surabaya\",\r\n    \"category\" : 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/shop/:id/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"shop",
+										":id",
+										"update"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "dc36feda-e05e-4472-89ce-53cd2f80f13e"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "create produk",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiODY4NDM1NDctNTAwNS00ZTZmLTlkZmMtOTkwOTcwODViMTFhIiwiaWF0IjoxNzIzMjE2MTYxfQ.Ja3290jwjfsOuu8--asSZa07yrgWewsyu5edrzxfUH4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"shop_id\":\"557a1f63-c67c-485a-8c64-472e7a569d07\",\r\n    \"name\": \"nasi padang\",\r\n    \"deskripsi\" : \" 5 sendok garam - 5 sendok gula ini 50000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "menampilkan data product",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNmQzNWVkNzMtNWIyNy00OTEyLWI5NGYtMWIzZjNiMDFhZTdlIiwiaWF0IjoxNzIzMDQ3NzY4fQ.ygCQDKphEGSj9TlNH77GfA1pXaIMn8kMcaecW46vU8I",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/shop",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"shop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "signup System",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nama\": \"fiki3\",\n  \"password\": \"admin\",\n  \"nik\":\"123456789012\",\n  \"email\": \"ubtgotham@gmail.com\",\n   \"re_type_pass\": \"admin\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin Sstem",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"fiki1\",\r\n    \"password\" : \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
