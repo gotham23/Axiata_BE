@@ -10,8 +10,12 @@ module.exports = {
   update(id, args) {
     return Products.update(args, { where: { id } });
   },
-  destroy(args) {
-    return Products.destroy({ where: args });
+  delete(productId) {
+    return Products.destroy({ where: { id: productId } });
+  },
+  
+  findById(productId) {
+    return Products.findOne({ where: { id: productId } });
   },
   find(argsWhere) {
     return Products.findOne({

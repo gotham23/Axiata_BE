@@ -35,10 +35,10 @@ module.exports = {
         name: req.body.name,
         deskripsi: req.body.deskripsi,
         deleted: false,
-        photo: '/user/avatar_default.png'
+        photo: req.body.image
       };
       
-      let shop = await shopRepo.findId(args.shop_id);
+      let shop = await shopRepo.findById(args.shop_id);
       if (!shop) {
         return { error: 404, msg: 'Toko tidak tersedia' };
       }
@@ -66,8 +66,13 @@ module.exports = {
   },
   async deleteProduct(req) {
     try {
-      let deleted = await productsRepo.destroy({id: req.params.id});
-      return { deleted };
+      const productId = req.params.id;
+          const product = await productsRepo.findById(productId);
+          if (!product) {
+            return { error: 404, msg: 'product tidak ditemukan' };
+          }
+          await productsRepo.delete(productId);
+          return { msg: 'product berhasil dihapus'  };
     } catch (error) {
       console.log(error);
       return { error: 400, msg: error ? error : 'Bad request server function' };

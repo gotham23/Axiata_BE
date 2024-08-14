@@ -30,18 +30,34 @@
 									},
 									{
 										"key": "x-access-token",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYzhhNjVlNmQtMWJkNC00OGM4LTljYjgtYzgwZDU0YmI5NTE1IiwiaWF0IjoxNzIzMjIxNTY5fQ.iugSuUq8jzeJ160Dc-s2tX59ORkiOIi2sGk_Bq--N-0",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMmM1YTUzNzYtMDUzMC00MTkyLTk4ZTMtNTdmYjQxM2IzYjBhIiwiaWF0IjoxNzIzNTY5MDgxfQ.OlFFpR-HVpXCPI4OyrxVtsPYAdrhhBgW21wN9Tbye0s",
 										"type": "text"
 									}
 								],
 								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\" : \" kollo shop\",\r\n    \"alamat\" : \"surabaya\",\r\n    \"category\" : 2\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "F2 corp",
+											"type": "text"
+										},
+										{
+											"key": "alamat",
+											"value": "tanjung Priok",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/E:/1.skripsi/doc. Tugas Akhir/form asistensi.jpg"
 										}
-									}
+									]
 								},
 								"url": {
 									"raw": "http://localhost:3000/api/v1/shop/:id/update",
@@ -60,7 +76,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "d8a687e6-1924-40ea-a8a5-337704bc4248"
+											"value": "8ec85e38-61fb-418a-b7e8-aeb88f0646d8"
 										}
 									]
 								}
@@ -122,7 +138,7 @@
 							"response": []
 						},
 						{
-							"name": "http://localhost:3000/api/v1/shop/:id",
+							"name": "menampilkan data byID",
 							"request": {
 								"method": "GET",
 								"header": [
@@ -138,8 +154,9 @@
 									},
 									{
 										"key": "x-access-token",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYzhhNjVlNmQtMWJkNC00OGM4LTljYjgtYzgwZDU0YmI5NTE1IiwiaWF0IjoxNzIzMjIxNTY5fQ.iugSuUq8jzeJ160Dc-s2tX59ORkiOIi2sGk_Bq--N-0",
-										"type": "text"
+										"value": "83d9b430-ba55-4643-bb48-3eaa24053a19",
+										"type": "text",
+										"disabled": true
 									}
 								],
 								"url": {
@@ -158,7 +175,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "dc36feda-e05e-4472-89ce-53cd2f80f13e"
+											"value": ""
 										}
 									]
 								}
@@ -184,18 +201,34 @@
 							},
 							{
 								"key": "x-access-token",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYzhhNjVlNmQtMWJkNC00OGM4LTljYjgtYzgwZDU0YmI5NTE1IiwiaWF0IjoxNzIzMjIxNTY5fQ.iugSuUq8jzeJ160Dc-s2tX59ORkiOIi2sGk_Bq--N-0",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiMjM1NzRiOGYtM2U4OS00Njg1LWEzNDgtNjdjMWY3ZTViM2M0IiwiaWF0IjoxNzIzNTM3MTE5fQ.yO7Wdcv4p09l06QBeLR-vY9ItMnECCIzKYSq7SUj_1M",
 								"type": "text"
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n        \"name\": \"kozzy Shop\",\r\n        \"photo\": \"/user/avatar_default.png\",\r\n        \"alamat\": \"jakarta\",\r\n        \"category\": 1\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "kozzy Shop2",
+									"type": "text"
+								},
+								{
+									"key": "alamat",
+									"value": "jakarta",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/1.skripsi/doc. Tugas Akhir/form asistensi.jpg"
 								}
-							}
+							]
 						},
 						"url": {
 							"raw": "http://localhost:3000/api/v1/shop",
@@ -430,18 +463,34 @@
 							},
 							{
 								"key": "x-access-token",
-								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiODY4NDM1NDctNTAwNS00ZTZmLTlkZmMtOTkwOTcwODViMTFhIiwiaWF0IjoxNzIzMjE2MTYxfQ.Ja3290jwjfsOuu8--asSZa07yrgWewsyu5edrzxfUH4",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiZWU4MzFiMjktNDdlMy00OTVmLTgyYjktZTQ1Nzk3MDQ0ZDg5IiwiaWF0IjoxNzIzNDg0ODIyfQ.e3WN0hywo-KYbrxBEeEHTx7UIIw2z4BFnjI4kQgBrfc",
 								"type": "text"
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"shop_id\":\"557a1f63-c67c-485a-8c64-472e7a569d07\",\r\n    \"name\": \"nasi padang\",\r\n    \"deskripsi\" : \" 5 sendok garam - 5 sendok gula ini 50000\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "shop_id",
+									"value": "58a80fe5-6214-4fe7-b901-96cae4ffc860",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "nasi padang",
+									"type": "text"
+								},
+								{
+									"key": "deskripsi",
+									"value": "5 sendok garam - 5 sendok gula ini 50000",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/E:/1.skripsi/doc. Tugas Akhir/form asistensi.jpg"
 								}
-							}
+							]
 						},
 						"url": {
 							"raw": "http://localhost:3000/api/v1/product",

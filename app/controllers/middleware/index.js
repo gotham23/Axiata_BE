@@ -1,8 +1,9 @@
 const { uploadHandler } = require('./fileHandler');
 const auths = require('./user');
-const shops = require('./shop');
+const {createShopForm} = require ('./shop')
+const {createProductForm} = require ('./product')
 
 
 module.exports = {
-   auths , uploadHandler,shops
+   auths, uploadHandler, createShopForm, createProductForm
 }

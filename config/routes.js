@@ -1,7 +1,7 @@
 const express = require('express');
 const ctrl = require('../app/controllers');
 const path = require('path');
-const { uploadUser, uploadTicket } = require("../app/controllers/middleware/upload");
+const { uploadUser, uploadTicket, uploadShop, uploadProduct} = require("../app/controllers/middleware/upload");
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
 const cors = require('cors');
@@ -45,19 +45,19 @@ apiRouter.post('/api/v1/register', ctrl.middleware.auths.register, ctrl.api.v1.a
 apiRouter.post('/api/v1/loginRegGoogle', ctrl.api.v1.auths.loginRegGoogle);
 
 //===================================== Route untuk Pemilik UMKM =====================================
-apiRouter.post("/api/v1/shop", ctrl.middleware.auths.isLogin, ctrl.api.v1.shop.createShop);
-apiRouter.put('/api/v1/shop/:id/update',ctrl.middleware.auths.isLogin, ctrl.api.v1.shop.updateShop);
+apiRouter.post("/api/v1/shop", ctrl.middleware.auths.isLogin,uploadShop.single('image'), ctrl.middleware.uploadHandler, ctrl.middleware.createShopForm, ctrl.api.v1.shop.createShop);
+apiRouter.put('/api/v1/shop/:id/update',ctrl.middleware.auths.isLogin,uploadShop.single('image'), ctrl.middleware.uploadHandler, ctrl.api.v1.shop.updateShop);
 apiRouter.delete('/api/v1/shop/:id/delete',ctrl.middleware.auths.isLogin, ctrl.api.v1.shop.deleteShop);
 apiRouter.get("/api/v1/shop/:id", ctrl.middleware.auths.isLogin, ctrl.api.v1.shop.getShop);
 
 //===================================== Route untuk Toko Pemilik produk =====================================
-apiRouter.post("/api/v1/product", ctrl.middleware.auths.isLogin, ctrl.api.v1.product.createProduct);
-apiRouter.put("/api/v1/product/:id/update", ctrl.middleware.auths.isLogin, ctrl.api.v1.product.updateProduct);
+apiRouter.post("/api/v1/product", ctrl.middleware.auths.isLogin, uploadProduct.single('image'), ctrl.middleware.uploadHandler, ctrl.middleware.createProductForm, ctrl.api.v1.product.createProduct);
+apiRouter.put("/api/v1/product/:id/update", ctrl.middleware.auths.isLogin,uploadShop.single('image'), ctrl.middleware.uploadHandler, ctrl.api.v1.product.updateProduct);
 apiRouter.delete("/api/v1/product/:id/delete", ctrl.middleware.auths.isLogin, ctrl.api.v1.product.deleteProduct);
 
 //==================================== Route untuk user login ================================
 apiRouter.get('/api/v1/who-am-i', ctrl.middleware.auths.isLogin, ctrl.api.v1.auths.whoAmI);
-apiRouter.put('/api/v1/update-profile', ctrl.middleware.auths.isLogin, uploadUser.single('image'), ctrl.middleware.uploadHandler, ctrl.middleware.auths.updateUser, ctrl.api.v1.auths.updateProfile);
+
 
 
 //======================================= Route untuk admin ==================================

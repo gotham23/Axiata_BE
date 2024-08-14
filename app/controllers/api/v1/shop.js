@@ -25,17 +25,20 @@ module.exports = {
     }
   },
 
-  async createShop(req, res) {
-    try {
-      const result = await shopService.create(req);
-      if (result.error) {
-        return res.status(result.error).json({ msg: result.msg });
-      }
-      return res.status(201).json(result.product); 
-    } catch (error) {
-      return res.status(500).json({ msg: 'Internal Server Error' });
-    }
-  },
+ async createShop(req, res) {
+    shopService
+        .create(req)
+        .then((data) => {
+          if (data.error) {
+            res.status(data.error).json({ errors: [data.msg] });
+          } else {
+            res.status(200).json(data);
+          }
+        })
+        .catch((err) => {
+          res.status(400).json({ errors: [err] });
+        });
+    },
 
   async updateShop(req, res) {
     try {

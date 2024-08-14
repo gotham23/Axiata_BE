@@ -14,4 +14,13 @@ module.exports = {
         return
     })
 },
+createProductForm(req, res, next) {
+    if (
+      req.body.image == undefined) {
+      console.log(req.body);
+      res.status(403).json({ errors: ['field foto Produk wajib diisi'] });
+      return;
+    }
+    next();
+  },
 };

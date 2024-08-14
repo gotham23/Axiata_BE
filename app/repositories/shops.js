@@ -12,11 +12,13 @@ module.exports = {
         where: { id }
       });
     },
-    destroy(args){
-      return Shops.destroy({
-          where: args
-      })
-  },
+    delete(shopId) {
+      return Shops.destroy({ where: { id: shopId } });
+    },
+    
+    findById(shopId) {
+      return Shops.findOne({ where: { id: shopId } });
+    },
     find(argsWhere) {
       console.log(argsWhere);
       return Shops.findOne({where: argsWhere, include: [{ all: true, nested: true }]})
@@ -30,5 +32,7 @@ module.exports = {
           include: [{ all: true, nested: true }]
         });
       },
-      
-}
+      findByUserId(userId) {a
+        return Shops.findOne({ where: { user_id: userId } });
+    },
+};
